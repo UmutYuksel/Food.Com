@@ -12,17 +12,17 @@ import Firebase
 
 struct SignUpViewModel {
     
-    func firebaseUserSave(kullaniciAdi:String,sifre:String,eposta:String,view:UIView) {
+    func firebaseUserSave(username:String,password:String,email:String,view:UIView) {
         
-        let kayitHud = JGProgressHUD(style: .light)
-        kayitHud.textLabel.text = "Kaydınız Gerçekleştiriliyor"
-        kayitHud.detailTextLabel.text = "Lütfen Bekleyiniz"
-        kayitHud.show(in: view)
+        let signUpHud = JGProgressHUD(style: .light)
+        signUpHud.textLabel.text = "Kaydınız Gerçekleştiriliyor"
+        signUpHud.detailTextLabel.text = "Lütfen Bekleyiniz"
+        signUpHud.show(in: view)
         
-        Auth.auth().createUser(withEmail: eposta, password: sifre) { authResult, error in
+        Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
             guard let user = authResult?.user, error == nil else {
                 
-                kayitHud.dismiss(afterDelay: 0.5)
+                signUpHud.dismiss(afterDelay: 0.5)
                 let errorHud = JGProgressHUD(style: .light)
                 errorHud.indicatorView = JGProgressHUDErrorIndicatorView()
                 errorHud.textLabel.text = "Üye Olunamadı."
@@ -32,21 +32,21 @@ struct SignUpViewModel {
                 return
             }
             
-            guard let kullaniciID = authResult?.user.uid else { return }
+            guard let userId = authResult?.user.uid else { return }
             
             let db = Firestore.firestore()
             
-            let userDetails = ["KullaniciAdi " : kullaniciAdi,
-                               "KullaniciID" : kullaniciAdi,
-                               "E-Mail" : eposta,
-                               "Parola" : sifre]
+            let userDetails = ["KullaniciAdi " : username,
+                               "KullaniciID" : username,
+                               "E-Mail" : email,
+                               "Parola" : password]
             
-            db.collection("Kullanicilar").document(kullaniciID).setData(userDetails) { (error) in
+            db.collection("Kullanicilar").document(userId).setData(userDetails) { (error) in
                 if error != nil {
                     return
                 }
                 
-                kayitHud.dismiss(afterDelay: 0.5)
+                signUpHud.dismiss(afterDelay: 0.5)
                 let successHud = JGProgressHUD(style: .light)
                 successHud.indicatorView = JGProgressHUDSuccessIndicatorView()
                 successHud.textLabel.text = "Üye Olma İşlemi Başarılı."

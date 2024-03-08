@@ -15,19 +15,19 @@ class SignUpViewController: UIViewController {
     
     @IBOutlet weak var signInButton: UIButton!
     @IBOutlet weak var signUpButton: UIButton!
-    @IBOutlet weak var sifreTextField: UITextField!
-    @IBOutlet weak var epostaTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
     
     var viewModel = SignUpViewModel()
     
-    @IBAction func kayitOlButtonPressed(_ sender: Any) {
+    @IBAction func signUpButtonPressed(_ sender: Any) {
         
-        viewModel.firebaseUserSave(kullaniciAdi: usernameTextField.text!, sifre: sifreTextField.text!, eposta: epostaTextField.text!, view: self.view)
+        viewModel.firebaseUserSave(username: usernameTextField.text!, password: passwordTextField.text!, email: emailTextField.text!, view: self.view)
  
     }
     
     
-    @IBAction func girisYapButtonPressed(_ sender: Any) {
+    @IBAction func signInButtonPressed(_ sender: Any) {
 
         dismiss(animated: true) {
             self.viewModel.signInViewController()
@@ -36,8 +36,8 @@ class SignUpViewController: UIViewController {
     
     func prepareViews() {
         usernameTextField.delegate = self
-        sifreTextField.delegate = self
-        epostaTextField.delegate = self
+        passwordTextField.delegate = self
+        emailTextField.delegate = self
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
         view.addGestureRecognizer(tapGesture)
@@ -62,8 +62,8 @@ extension SignUpViewController : UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         usernameTextField.resignFirstResponder()
-        epostaTextField.resignFirstResponder()
-        sifreTextField.resignFirstResponder()
+        emailTextField.resignFirstResponder()
+        passwordTextField.resignFirstResponder()
         return true
     }
 }

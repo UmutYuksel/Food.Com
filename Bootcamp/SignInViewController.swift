@@ -9,21 +9,21 @@ import UIKit
 
 class SignInViewController: UIViewController {
 
-    @IBOutlet weak var uyeOlButton: UIButton!
-        @IBOutlet weak var sifreTextField: UITextField!
-        @IBOutlet weak var kullaniciAdiTextField: UITextField!
-        @IBOutlet weak var sifremiUnuttumButton: UIButton!
-        @IBOutlet weak var girisYapButton: UIButton!
+    @IBOutlet weak var signUpButton: UIButton!
+        @IBOutlet weak var passwordTextField: UITextField!
+        @IBOutlet weak var usernameTextField: UITextField!
+        @IBOutlet weak var forgotPasswordButton: UIButton!
+        @IBOutlet weak var signInButton: UIButton!
         
         var viewModel = SignInViewModel()
         
         
         func prepareViewWithViewModel() {
             
-            viewModel.uyeOlAttributedString(button: uyeOlButton)
+            viewModel.signUpAttributedString(button: signUpButton)
         }
         
-        @IBAction func girisYapPressed(_ sender: Any) {
+        @IBAction func signInButtonPressed(_ sender: Any) {
             viewModel.onError = { error in
                         // ViewModel'daki fonksiyon hata verdiğinde yapılacak işlemler
                         // Örneğin, hata mesajını kullanıcıya gösterme
@@ -35,17 +35,17 @@ class SignInViewController: UIViewController {
                         self.performSegue(withIdentifier: "girisToTabBarSegue", sender: nil)
                     }
 
-                    viewModel.girisYapWithFirebase(view: self.view, epostaText: kullaniciAdiTextField.text!, sifreText: sifreTextField.text!)
+                    viewModel.signInWithFirebase(view: self.view, emailText: usernameTextField.text!, passwordText: passwordTextField.text!)
         }
         
         
-        @IBAction func sifremiUnuttumPressed(_ sender: Any) {
+        @IBAction func forgotPasswordButtonPressed(_ sender: Any) {
         }
         
-        @IBAction func uyeOlPressed(_ sender: Any) {
+        @IBAction func signUpButtonPressed(_ sender: Any) {
             
             dismiss(animated: true) {
-                self.viewModel.uyeOlViewController()
+                self.viewModel.toSignUpViewController()
             }
         }
 

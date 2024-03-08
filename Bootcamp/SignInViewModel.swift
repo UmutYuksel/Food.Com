@@ -12,7 +12,7 @@ import JGProgressHUD
 
 struct SignInViewModel {
     
-    func uyeOlAttributedString (button : UIButton) {
+    func signUpAttributedString (button : UIButton) {
         let attributedString1 = NSAttributedString(string: "Hesabın yok mu?", attributes:
                                                     [NSAttributedString.Key.foregroundColor: UIColor.darkGray])
         let attributedString2 = NSAttributedString(string: "Üye Ol", attributes:
@@ -27,7 +27,7 @@ struct SignInViewModel {
         button.setAttributedTitle(combination, for: .normal)
     }
     
-    func uyeOlViewController() {
+    func toSignUpViewController() {
         
         let stroyboard = UIStoryboard(name: "Main", bundle: nil)
         let sheetPresenationController = stroyboard.instantiateViewController(withIdentifier: "SignUpViewController") as! SignUpViewController
@@ -39,13 +39,13 @@ struct SignInViewModel {
     var onSuccess: (() -> Void)?
     var onError: ((Error) -> Void)?
 
-        func girisYapWithFirebase(view: UIView, epostaText: String, sifreText: String) {
+        func signInWithFirebase(view: UIView, emailText: String, passwordText: String) {
             let loginHud = JGProgressHUD(style: .light)
             loginHud.textLabel.text = "Oturum Açılıyor"
             loginHud.detailTextLabel.text = "Lütfen Bekleyiniz"
             loginHud.show(in: view)
 
-            Auth.auth().signIn(withEmail: epostaText, password: sifreText) { (response, error) in
+            Auth.auth().signIn(withEmail: emailText, password: passwordText) { (response, error) in
                 loginHud.dismiss(afterDelay: 0.5) // Hata olsa da başarılı olsa da dismiss yapılmalı
 
                 if let error = error {
