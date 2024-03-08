@@ -142,10 +142,9 @@
 		922389F92B9A92A600A7481D /* Bootcamp */ = {
 			isa = PBXGroup;
 			children = (
-				925EF83E2B9A9533006404FF /* Base.lproj */,
-				925EF83A2B9A94EE006404FF /* Extension */,
-				92238A382B9A940300A7481D /* Scene */,
-				92238A352B9A93E900A7481D /* Data */,
+				92B11ED92B9B71B0003C3DA1 /* Extension */,
+				92B11ED72B9B71A2003C3DA1 /* Data */,
+				92B11ECC2B9B7122003C3DA1 /* Scene */,
 				92238A032B9A92A700A7481D /* Assets.xcassets */,
 				92238A082B9A92A700A7481D /* Info.plist */,
 				925EF8432B9A9637006404FF /* GoogleService-Info.plist */,
@@ -153,123 +152,141 @@
 			path = Bootcamp;
 			sourceTree = "<group>";
 		};
-		92238A352B9A93E900A7481D /* Data */ = {
+		92B11ECC2B9B7122003C3DA1 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
-				92238A362B9A93FA00A7481D /* Recipes.swift */,
+				92B11ED62B9B7195003C3DA1 /* Storyboard */,
+				92B11ED52B9B7183003C3DA1 /* Delegate */,
+				92B11ED42B9B7178003C3DA1 /* Home Page */,
+				92B11ED22B9B7169003C3DA1 /* Sign Up */,
+				92B11ED12B9B715E003C3DA1 /* Sign In */,
+				92B11ED02B9B7151003C3DA1 /* Login */,
+				92B11ECF2B9B713E003C3DA1 /* New Post */,
+				92B11ECE2B9B7135003C3DA1 /* Search */,
+				92B11ECD2B9B7129003C3DA1 /* Setting */,
 			);
-			name = Data;
+			path = Scene;
 			sourceTree = "<group>";
 		};
-		92238A382B9A940300A7481D /* Scene */ = {
+		92B11ECD2B9B7129003C3DA1 /* Setting */ = {
 			isa = PBXGroup;
 			children = (
-				925EF8352B9A94D4006404FF /* Profile */,
-				925EF8322B9A94CA006404FF /* Search */,
-				925EF82D2B9A94BA006404FF /* New Post */,
-				925EF8262B9A94AF006404FF /* Login */,
-				92238A462B9A947200A7481D /* Sign In */,
-				92238A412B9A946500A7481D /* Sign Up */,
-				92238A3A2B9A942800A7481D /* Home Page */,
-				92238A392B9A942200A7481D /* Delegate */,
+				925EF8372B9A94DE006404FF /* SettingsViewController.swift */,
+				925EF8362B9A94DD006404FF /* SettingsViewModel.swift */,
 			);
-			name = Scene;
+			path = Setting;
 			sourceTree = "<group>";
 		};
-		92238A392B9A942200A7481D /* Delegate */ = {
+		92B11ECE2B9B7135003C3DA1 /* Search */ = {
 			isa = PBXGroup;
 			children = (
-				92238A3B2B9A944700A7481D /* AppDelegate.swift */,
-				92238A3C2B9A944700A7481D /* SceneDelegate.swift */,
+				925EF8332B9A94D1006404FF /* SearchViewController.swift */,
 			);
-			name = Delegate;
+			path = Search;
 			sourceTree = "<group>";
 		};
-		92238A3A2B9A942800A7481D /* Home Page */ = {
+		92B11ECF2B9B713E003C3DA1 /* New Post */ = {
 			isa = PBXGroup;
 			children = (
-				92238A3F2B9A945400A7481D /* HomePageViewController.swift */,
+				925EF82F2B9A94C1006404FF /* PhotosCollectionViewCell.swift */,
+				925EF82E2B9A94C1006404FF /* NewPostViewController.swift */,
 			);
-			name = "Home Page";
+			path = "New Post";
 			sourceTree = "<group>";
 		};
-		92238A412B9A946500A7481D /* Sign Up */ = {
-			isa = PBXGroup;
-			children = (
-				92238A432B9A946F00A7481D /* SignUpViewController.swift */,
-				92238A422B9A946F00A7481D /* SignUpViewModel.swift */,
-			);
-			name = "Sign Up";
-			sourceTree = "<group>";
-		};
-		92238A462B9A947200A7481D /* Sign In */ = {
-			isa = PBXGroup;
-			children = (
-				92238A482B9A947B00A7481D /* SignInViewController.swift */,
-				92238A472B9A947A00A7481D /* SignInViewModel.swift */,
-			);
-			name = "Sign In";
-			sourceTree = "<group>";
-		};
-		925EF8262B9A94AF006404FF /* Login */ = {
+		92B11ED02B9B7151003C3DA1 /* Login */ = {
 			isa = PBXGroup;
 			children = (
 				925EF8282B9A94B5006404FF /* LoginViewController.swift */,
 				925EF8292B9A94B5006404FF /* LoginViewModel.swift */,
 				925EF8272B9A94B5006404FF /* WikiCollectionViewCell.swift */,
 			);
-			name = Login;
+			path = Login;
 			sourceTree = "<group>";
 		};
-		925EF82D2B9A94BA006404FF /* New Post */ = {
+		92B11ED12B9B715E003C3DA1 /* Sign In */ = {
 			isa = PBXGroup;
 			children = (
-				925EF82E2B9A94C1006404FF /* NewPostViewController.swift */,
-				925EF82F2B9A94C1006404FF /* PhotosCollectionViewCell.swift */,
+				92238A482B9A947B00A7481D /* SignInViewController.swift */,
+				92238A472B9A947A00A7481D /* SignInViewModel.swift */,
 			);
-			name = "New Post";
+			path = "Sign In";
 			sourceTree = "<group>";
 		};
-		925EF8322B9A94CA006404FF /* Search */ = {
+		92B11ED22B9B7169003C3DA1 /* Sign Up */ = {
 			isa = PBXGroup;
 			children = (
-				925EF8332B9A94D1006404FF /* SearchViewController.swift */,
+				92238A432B9A946F00A7481D /* SignUpViewController.swift */,
+				92238A422B9A946F00A7481D /* SignUpViewModel.swift */,
 			);
-			name = Search;
+			path = "Sign Up";
 			sourceTree = "<group>";
 		};
-		925EF8352B9A94D4006404FF /* Profile */ = {
+		92B11ED42B9B7178003C3DA1 /* Home Page */ = {
 			isa = PBXGroup;
 			children = (
-				925EF8372B9A94DE006404FF /* SettingsViewController.swift */,
-				925EF8362B9A94DD006404FF /* SettingsViewModel.swift */,
+				92238A3F2B9A945400A7481D /* HomePageViewController.swift */,
 			);
-			name = Profile;
+			path = "Home Page";
 			sourceTree = "<group>";
 		};
-		925EF83A2B9A94EE006404FF /* Extension */ = {
+		92B11ED52B9B7183003C3DA1 /* Delegate */ = {
 			isa = PBXGroup;
 			children = (
-				925EF83B2B9A94F3006404FF /* Firebase */,
+				92238A3B2B9A944700A7481D /* AppDelegate.swift */,
+				92238A3C2B9A944700A7481D /* SceneDelegate.swift */,
 			);
-			name = Extension;
+			path = Delegate;
 			sourceTree = "<group>";
 		};
-		925EF83B2B9A94F3006404FF /* Firebase */ = {
-			isa = PBXGroup;
-			children = (
-				925EF83C2B9A94FA006404FF /* SimpleAppCheckProviderFactory.swift */,
-			);
-			name = Firebase;
-			sourceTree = "<group>";
-		};
-		925EF83E2B9A9533006404FF /* Base.lproj */ = {
+		92B11ED62B9B7195003C3DA1 /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
 				925EF8402B9A953D006404FF /* LaunchScreen.storyboard */,
 				925EF83F2B9A953D006404FF /* Main.storyboard */,
 			);
-			name = Base.lproj;
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		92B11ED72B9B71A2003C3DA1 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				92B11ED82B9B71A8003C3DA1 /* Recipe */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		92B11ED82B9B71A8003C3DA1 /* Recipe */ = {
+			isa = PBXGroup;
+			children = (
+				92238A362B9A93FA00A7481D /* Recipes.swift */,
+			);
+			path = Recipe;
+			sourceTree = "<group>";
+		};
+		92B11ED92B9B71B0003C3DA1 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				92B11EDB2B9B71C1003C3DA1 /* Firebase */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		92B11EDB2B9B71C1003C3DA1 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				92B11EDC2B9B71C6003C3DA1 /* FirebaseAppCheckü */,
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		92B11EDC2B9B71C6003C3DA1 /* FirebaseAppCheckü */ = {
+			isa = PBXGroup;
+			children = (
+				925EF83C2B9A94FA006404FF /* SimpleAppCheckProviderFactory.swift */,
+			);
+			name = "FirebaseAppCheckü";
+			path = "FirebaseAppCheckü";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
