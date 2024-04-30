@@ -1,6 +1,6 @@
 import UIKit
 
-class PhotosCollectionViewCell: UICollectionViewCell, UIGestureRecognizerDelegate {
+class SelectedPhotosCollectionViewCell: UICollectionViewCell, UIGestureRecognizerDelegate {
 
     @IBOutlet weak var selectedImageView: UIImageView!
 
