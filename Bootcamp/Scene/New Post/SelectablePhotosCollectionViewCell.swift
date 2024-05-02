@@ -23,9 +23,11 @@ class SelectablePhotosCollectionViewCell: UICollectionViewCell {
             let width = screenWidth / 4.0
             
             // 30px yükseklik
-            let height: CGFloat = 30.0
+            let height: CGFloat = 100
             
             // Hücrenin genişliğini ve yüksekliğini ayarla
-            self.frame.size = CGSize(width: width, height: height)
+        self.frame.size = CGSize(width: width, height: height)
         }
+    
+    
 }

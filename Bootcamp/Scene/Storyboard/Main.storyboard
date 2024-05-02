@@ -99,8 +99,8 @@
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" restorationIdentifier="selectablePhotosCollectionView" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="WtS-uB-kCm">
                                 <rect key="frame" x="0.0" y="479" width="393" height="373"/>
-                                <color key="backgroundColor" systemColor="labelColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ZbX-4V-jJU">
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="ZbX-4V-jJU">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -114,10 +114,13 @@
                                             <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Xe5-Rq-q3d">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Xe5-Rq-q3d">
                                                     <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <color key="tintColor" name="tintColor"/>
                                                 </imageView>
                                             </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="Xe5-Rq-q3d" secondAttribute="trailing" id="HQP-k3-m3r"/>
                                                 <constraint firstAttribute="bottom" secondItem="Xe5-Rq-q3d" secondAttribute="bottom" id="NIE-RE-FUM"/>
@@ -125,6 +128,8 @@
                                                 <constraint firstItem="Xe5-Rq-q3d" firstAttribute="top" secondItem="kQg-PR-a9x" secondAttribute="top" id="lay-ua-EGs"/>
                                             </constraints>
                                         </collectionViewCellContentView>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="selectableImageView" destination="Xe5-Rq-q3d" id="Hwc-N0-542"/>
                                         </connections>
@@ -136,7 +141,6 @@
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" name="tintColor"/>
                         <constraints>
-                            <constraint firstItem="aN3-3K-wAW" firstAttribute="bottom" secondItem="WtS-uB-kCm" secondAttribute="bottom" id="0be-Ue-R4r"/>
                             <constraint firstItem="aN3-3K-wAW" firstAttribute="trailing" secondItem="WtS-uB-kCm" secondAttribute="trailing" id="1kO-gA-u30"/>
                             <constraint firstItem="p39-ty-duO" firstAttribute="top" secondItem="VoR-WU-rSp" secondAttribute="bottom" constant="5" id="37L-Xf-34A"/>
                             <constraint firstItem="VoR-WU-rSp" firstAttribute="top" secondItem="aN3-3K-wAW" secondAttribute="top" id="3A8-os-OLB"/>
@@ -149,6 +153,7 @@
                             <constraint firstItem="WtS-uB-kCm" firstAttribute="top" secondItem="2DX-ao-79I" secondAttribute="bottom" constant="2" id="gfE-kk-5Yu"/>
                             <constraint firstItem="2DX-ao-79I" firstAttribute="top" secondItem="VoR-WU-rSp" secondAttribute="bottom" constant="5" id="lyH-MR-3GO"/>
                             <constraint firstItem="dYF-ds-F3D" firstAttribute="top" secondItem="VoR-WU-rSp" secondAttribute="bottom" constant="5" id="mqp-OW-PgQ"/>
+                            <constraint firstAttribute="bottom" secondItem="WtS-uB-kCm" secondAttribute="bottom" id="q4L-hP-wpS"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Tkc-rm-zcz">
@@ -870,11 +875,11 @@
         <namedColor name="tintColor">
             <color red="0.54699999094009399" green="0.082000002264976501" blue="0.31000000238418579" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="separatorColor">
-            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>
