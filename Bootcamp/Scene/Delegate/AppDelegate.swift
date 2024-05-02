@@ -16,42 +16,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-           FirebaseApp.configure()
-
-           let providerFactory = SimpleAppCheckProviderFactory()
-           AppCheck.setAppCheckProviderFactory(providerFactory)
-
-           // Firebase Authentication durumunu dinleyen bir listener ekleyin
-           Auth.auth().addStateDidChangeListener { [weak self] (auth, user) in
-               guard let self = self else { return }
-
-               if user == nil {
-                   print("DEBUG: Kullanıcı oturum açmamış, LoginViewController'a yönlendiriliyor.")
-                   DispatchQueue.main.async {
-                       let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                       let loginViewController = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
-                       self.window?.rootViewController = loginViewController
-                       self.window?.makeKeyAndVisible()
-                       
-                       // Ekstra kontrol amaçlı
-                       print("DEBUG: Root View Controller -> \(self.window?.rootViewController)")
-                   }
-               } else {
-                   print("DEBUG: Kullanıcı oturum açmış, TabBarController'a yönlendiriliyor.")
-                   DispatchQueue.main.async {
-                       let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                       let tabBarController = storyboard.instantiateViewController(withIdentifier: "TabBarController") as! UITabBarController
-                       self.window?.rootViewController = tabBarController
-                       self.window?.makeKeyAndVisible()
-                       
-                       // Ekstra kontrol amaçlı
-                       print("DEBUG: Root View Controller -> \(self.window?.rootViewController)")
-                   }
-               }
-           }
-
-           return true
-       }
+        
+        return true
+    }
 
     // MARK: UISceneSession Lifecycle
 

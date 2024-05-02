@@ -77,9 +77,11 @@ struct SignUpViewModel {
             // Hedef sayfayı modally (pageSheet) aç
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let sheetPresenationController = storyboard.instantiateViewController(withIdentifier: "SignInViewController") as! SignInViewController
+        print(sheetPresenationController)
             // Geçiş yapılan view controller'ı belirleyip, onun üzerinde modally aç
             if let rootViewController = UIApplication.shared.keyWindow?.rootViewController {
                 rootViewController.present(sheetPresenationController, animated: true, completion: nil)
+                print(rootViewController)
             }
         }
 }

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -16,7 +17,37 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        guard let _ = (scene as? UIWindowScene) else { return }
+        guard let windowScene = (scene as? UIWindowScene) else { return }
+            let window = UIWindow(windowScene: windowScene)
+
+            FirebaseApp.configure()
+
+            // Firebase Authentication durumunu dinleyen bir listener ekleyin
+            Auth.auth().addStateDidChangeListener { [weak self] (auth, user) in
+                guard let self = self else { return }
+
+                if let _ = user {
+                    print("DEBUG: Kullanıcı oturum açmış, TabBarController'a yönlendiriliyor.")
+                    self.showTabBarController(in: window)
+                } else {
+                    print("DEBUG: Kullanıcı oturum açmamış, LoginViewController'a yönlendiriliyor.")
+                    self.showLoginViewController(in: window)
+                }
+            }
+        }
+
+        func showTabBarController(in window: UIWindow) {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let tabBarController = storyboard.instantiateViewController(withIdentifier: "TabBarController") as! UITabBarController
+            window.rootViewController = tabBarController
+            window.makeKeyAndVisible()
+        }
+
+        func showLoginViewController(in window: UIWindow) {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let loginViewController = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+            window.rootViewController = loginViewController
+            window.makeKeyAndVisible()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

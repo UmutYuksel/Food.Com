@@ -31,8 +31,10 @@ struct SignInViewModel {
         
         let stroyboard = UIStoryboard(name: "Main", bundle: nil)
         let sheetPresenationController = stroyboard.instantiateViewController(withIdentifier: "SignUpViewController") as! SignUpViewController
+        print(sheetPresenationController)
         if let rootViewController = UIApplication.shared.keyWindow?.rootViewController {
             rootViewController.present(sheetPresenationController, animated: true, completion: nil)
+            print(rootViewController)
         }
     }
     
