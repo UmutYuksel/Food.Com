@@ -13,7 +13,7 @@
         <!--New Post View Controller-->
         <scene sceneID="1rT-sF-VPy">
             <objects>
-                <viewController storyboardIdentifier="NewPostViewController" hidesBottomBarWhenPushed="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Bkb-pe-S5P" customClass="NewPostViewController" customModule="Bootcamp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NewPostViewController" title="New Post View Controller" hidesBottomBarWhenPushed="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Bkb-pe-S5P" customClass="NewPostViewController" customModule="Bootcamp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uNf-Ul-QX3">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -44,10 +44,10 @@
                                                 </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="JVG-gc-Z2U" firstAttribute="top" secondItem="Yxp-P2-Pp3" secondAttribute="top" id="192-jC-fvZ"/>
-                                                <constraint firstAttribute="bottom" secondItem="JVG-gc-Z2U" secondAttribute="bottom" id="20X-39-nM1"/>
-                                                <constraint firstAttribute="trailing" secondItem="JVG-gc-Z2U" secondAttribute="trailing" id="8fG-ei-c5m"/>
-                                                <constraint firstItem="JVG-gc-Z2U" firstAttribute="leading" secondItem="Yxp-P2-Pp3" secondAttribute="leading" id="UGD-kM-srw"/>
+                                                <constraint firstItem="JVG-gc-Z2U" firstAttribute="leading" secondItem="Yxp-P2-Pp3" secondAttribute="leading" id="25v-84-Ktd"/>
+                                                <constraint firstItem="JVG-gc-Z2U" firstAttribute="top" secondItem="Yxp-P2-Pp3" secondAttribute="top" id="2i9-xO-xTa"/>
+                                                <constraint firstAttribute="bottom" secondItem="JVG-gc-Z2U" secondAttribute="bottom" id="E2b-DC-PrZ"/>
+                                                <constraint firstAttribute="trailing" secondItem="JVG-gc-Z2U" secondAttribute="trailing" id="dxJ-yS-DS8"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -63,43 +63,60 @@
                                 </connections>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2DX-ao-79I">
-                                <rect key="frame" x="5" y="449" width="144" height="28"/>
+                                <rect key="frame" x="5" y="449" width="161.33333333333334" height="28"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="28" id="1De-09-5GW"/>
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="expand-arrow" imagePlacement="trailing" title="Son Kaydedilenler" imagePadding="5">
-                                    <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="12"/>
+                                    <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="14"/>
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="photoAlbumePressed:" destination="Bkb-pe-S5P" eventType="touchUpInside" id="2F1-pr-qus"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p39-ty-duO">
                                 <rect key="frame" x="347" y="449" width="41" height="28"/>
+                                <color key="backgroundColor" systemColor="separatorColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="28" id="1rF-cR-0un"/>
                                     <constraint firstAttribute="width" constant="41" id="Ssr-D7-1Zs"/>
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" image="rectangle.on.rectangle" catalog="system"/>
+                                <buttonConfiguration key="configuration" style="plain" image="rectangle.on.rectangle" catalog="system"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="multipleSelectionPressed:" destination="Bkb-pe-S5P" eventType="touchUpInside" id="FXJ-sB-6pc"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dYF-ds-F3D">
                                 <rect key="frame" x="301" y="449" width="41" height="28"/>
+                                <color key="backgroundColor" systemColor="separatorColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="41" id="kwX-wR-Cz8"/>
                                     <constraint firstAttribute="height" constant="28" id="ykO-kI-aEW"/>
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" image="arrow.down.backward.and.arrow.up.forward" catalog="system"/>
+                                <buttonConfiguration key="configuration" style="plain" image="arrow.down.backward.and.arrow.up.forward" catalog="system"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="contentModeButtonPressed:" destination="Bkb-pe-S5P" eventType="touchUpInside" id="MqT-c0-nHN"/>
                                 </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" restorationIdentifier="selectablePhotosCollectionView" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="WtS-uB-kCm">
                                 <rect key="frame" x="0.0" y="479" width="393" height="373"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="ZbX-4V-jJU">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -116,21 +133,40 @@
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Xe5-Rq-q3d">
                                                     <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <color key="tintColor" name="tintColor"/>
                                                 </imageView>
+                                                <view alpha="0.40000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SDM-ii-Mac">
+                                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </view>
+                                                <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="check" translatesAutoresizingMaskIntoConstraints="NO" id="ad1-GW-RNW">
+                                                    <rect key="frame" x="101" y="7" width="20" height="20"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="20" id="ABS-81-Kmk"/>
+                                                        <constraint firstAttribute="width" constant="20" id="dU3-GS-bMs"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
+                                                <constraint firstItem="SDM-ii-Mac" firstAttribute="top" secondItem="kQg-PR-a9x" secondAttribute="top" id="6Ms-iH-mKq"/>
+                                                <constraint firstAttribute="bottom" secondItem="SDM-ii-Mac" secondAttribute="bottom" id="G4w-9g-oEM"/>
                                                 <constraint firstAttribute="trailing" secondItem="Xe5-Rq-q3d" secondAttribute="trailing" id="HQP-k3-m3r"/>
                                                 <constraint firstAttribute="bottom" secondItem="Xe5-Rq-q3d" secondAttribute="bottom" id="NIE-RE-FUM"/>
+                                                <constraint firstItem="SDM-ii-Mac" firstAttribute="leading" secondItem="kQg-PR-a9x" secondAttribute="leading" id="Tfa-T5-edF"/>
+                                                <constraint firstAttribute="trailing" secondItem="SDM-ii-Mac" secondAttribute="trailing" id="Wy3-Q2-NTU"/>
                                                 <constraint firstItem="Xe5-Rq-q3d" firstAttribute="leading" secondItem="kQg-PR-a9x" secondAttribute="leading" id="aHn-Zj-352"/>
                                                 <constraint firstItem="Xe5-Rq-q3d" firstAttribute="top" secondItem="kQg-PR-a9x" secondAttribute="top" id="lay-ua-EGs"/>
+                                                <constraint firstAttribute="trailing" secondItem="ad1-GW-RNW" secondAttribute="trailing" constant="7" id="qFX-GT-bYI"/>
+                                                <constraint firstItem="ad1-GW-RNW" firstAttribute="top" secondItem="kQg-PR-a9x" secondAttribute="top" constant="7" id="w6v-fo-sVu"/>
                                             </constraints>
                                         </collectionViewCellContentView>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" systemColor="systemBackgroundColor"/>
                                         <connections>
+                                            <outlet property="chechImageView" destination="ad1-GW-RNW" id="vHN-Q3-2Du"/>
+                                            <outlet property="highlightView" destination="SDM-ii-Mac" id="bLX-79-nej"/>
                                             <outlet property="selectableImageView" destination="Xe5-Rq-q3d" id="Hwc-N0-542"/>
                                         </connections>
                                     </collectionViewCell>
@@ -156,7 +192,7 @@
                             <constraint firstAttribute="bottom" secondItem="WtS-uB-kCm" secondAttribute="bottom" id="q4L-hP-wpS"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Tkc-rm-zcz">
+                    <navigationItem key="navigationItem" title="Yeni Gönderi" id="Tkc-rm-zcz">
                         <barButtonItem key="leftBarButtonItem" image="xmark" catalog="system" id="0sB-pY-JqL">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
@@ -165,10 +201,14 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="İleri" id="wBo-fJ-yx5">
                             <color key="tintColor" name="tintColor"/>
+                            <connections>
+                                <segue destination="v0I-Dz-r2q" kind="push" identifier="forwardSegueToPushPost" id="mhO-74-OLZ"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="contentModeButton" destination="dYF-ds-F3D" id="5Le-Lv-5pm"/>
+                        <outlet property="multipleSelectionButton" destination="p39-ty-duO" id="tdP-90-g5k"/>
                         <outlet property="selectablePhotosCollectionView" destination="WtS-uB-kCm" id="3ug-Eu-cTL"/>
                         <outlet property="selectedPhotosCollectionView" destination="VoR-WU-rSp" id="9yG-51-rO9"/>
                     </connections>
@@ -176,6 +216,67 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0U2-Ai-EJb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="620.61068702290072" y="438.73239436619718"/>
+        </scene>
+        <!--Push Post View Controller-->
+        <scene sceneID="HBp-Qa-JfL">
+            <objects>
+                <viewController storyboardIdentifier="PushPostViewController" title="Push Post View Controller" useStoryboardIdentifierAsRestorationIdentifier="YES" id="v0I-Dz-r2q" customClass="PushPostViewController" customModule="Bootcamp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="j8K-53-2y3">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="9sT-hk-yNw">
+                                <rect key="frame" x="0.0" y="44" width="393" height="402"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="niD-Co-xJa">
+                                    <size key="itemSize" width="394" height="342"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="pushCollectionViewCell" reuseIdentifier="pushCollectionViewCell" id="cKu-uv-40i" customClass="pushCollectionViewCell" customModule="Bootcamp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="402"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="hpj-7M-Ojv">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="402"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2hf-NT-ERQ">
+                                                    <rect key="frame" x="43" y="19" width="307" height="244"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I9d-gp-GB7">
+                                                    <rect key="frame" x="43" y="297" width="307" height="68"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" name="tintColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                        </collectionViewCellContentView>
+                                        <color key="backgroundColor" name="AccentColor"/>
+                                        <size key="customSize" width="393" height="402"/>
+                                        <connections>
+                                            <outlet property="pushTextField" destination="I9d-gp-GB7" id="oa9-fn-nls"/>
+                                            <outlet property="pushımageView" destination="2hf-NT-ERQ" id="H06-tk-WWF"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="eYM-v6-XFp"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Yeni Gönderi" id="cOW-YZ-UIx"/>
+                    <connections>
+                        <outlet property="pushCV" destination="9sT-hk-yNw" id="bOv-Wc-MnP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UsA-JC-C7U" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="620.61068702290072" y="1216.9014084507044"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="ejd-Zq-6Ki">
@@ -624,7 +725,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" name="tintColor"/>
                         <textAttributes key="titleTextAttributes">
-                            <color key="textColor" name="tintColor"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -863,6 +964,7 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="arrow.down.backward.and.arrow.up.forward" catalog="system" width="128" height="115"/>
+        <image name="check" width="50" height="50"/>
         <image name="envelope" catalog="system" width="128" height="85"/>
         <image name="expand-arrow" width="10" height="10"/>
         <image name="gearshape" catalog="system" width="128" height="123"/>
@@ -872,14 +974,20 @@
         <image name="plus.app" catalog="system" width="128" height="114"/>
         <image name="rectangle.on.rectangle" catalog="system" width="128" height="98"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
+        <namedColor name="AccentColor">
+            <color red="1" green="0.79199999570846558" blue="0.15700000524520874" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="tintColor">
             <color red="0.54699999094009399" green="0.082000002264976501" blue="0.31000000238418579" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="separatorColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529410000001" green="0.69019607839999997" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -17,6 +17,8 @@
 		92238A452B9A946F00A7481D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92238A432B9A946F00A7481D /* SignUpViewController.swift */; };
 		92238A492B9A947B00A7481D /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92238A472B9A947A00A7481D /* SignInViewModel.swift */; };
 		92238A4A2B9A947B00A7481D /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92238A482B9A947B00A7481D /* SignInViewController.swift */; };
+		925393CD2BE50DB80084E5D0 /* NewPostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925393CC2BE50DB80084E5D0 /* NewPostViewModel.swift */; };
+		925393D12BE53DA00084E5D0 /* SelectablePhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925393D02BE53DA00084E5D0 /* SelectablePhoto.swift */; };
 		925EF82A2B9A94B5006404FF /* WikiCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925EF8272B9A94B5006404FF /* WikiCollectionViewCell.swift */; };
 		925EF82B2B9A94B5006404FF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925EF8282B9A94B5006404FF /* LoginViewController.swift */; };
 		925EF82C2B9A94B5006404FF /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925EF8292B9A94B5006404FF /* LoginViewModel.swift */; };
@@ -57,6 +59,9 @@
 		925EF8792B9A96FD006404FF /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 925EF8782B9A96FD006404FF /* FirebaseStorage */; };
 		925EF87B2B9A96FD006404FF /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 925EF87A2B9A96FD006404FF /* FirebaseStorageCombine-Community */; };
 		925EF87E2B9A97E8006404FF /* JGProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 925EF87D2B9A97E8006404FF /* JGProgressHUD */; };
+		9287152D2BE675E90090BF8B /* PushPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9287152C2BE675E90090BF8B /* PushPostViewController.swift */; };
+		9287152F2BE676FA0090BF8B /* PushPostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9287152E2BE676FA0090BF8B /* PushPostViewModel.swift */; };
+		92C5F00D2BED7FF0003DE456 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C5F00C2BED7FF0003DE456 /* UIImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +77,8 @@
 		92238A432B9A946F00A7481D /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		92238A472B9A947A00A7481D /* SignInViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 		92238A482B9A947B00A7481D /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		925393CC2BE50DB80084E5D0 /* NewPostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostViewModel.swift; sourceTree = "<group>"; };
+		925393D02BE53DA00084E5D0 /* SelectablePhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectablePhoto.swift; sourceTree = "<group>"; };
 		925EF8272B9A94B5006404FF /* WikiCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WikiCollectionViewCell.swift; sourceTree = "<group>"; };
 		925EF8282B9A94B5006404FF /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		925EF8292B9A94B5006404FF /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -84,6 +91,9 @@
 		925EF83F2B9A953D006404FF /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		925EF8402B9A953D006404FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		925EF8432B9A9637006404FF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9287152C2BE675E90090BF8B /* PushPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushPostViewController.swift; sourceTree = "<group>"; };
+		9287152E2BE676FA0090BF8B /* PushPostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushPostViewModel.swift; sourceTree = "<group>"; };
+		92C5F00C2BED7FF0003DE456 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,9 +164,27 @@
 			path = Bootcamp;
 			sourceTree = "<group>";
 		};
+		925393CE2BE53D8F0084E5D0 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				925393D02BE53DA00084E5D0 /* SelectablePhoto.swift */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		9287152B2BE675CD0090BF8B /* Push Post */ = {
+			isa = PBXGroup;
+			children = (
+				9287152C2BE675E90090BF8B /* PushPostViewController.swift */,
+				9287152E2BE676FA0090BF8B /* PushPostViewModel.swift */,
+			);
+			path = "Push Post";
+			sourceTree = "<group>";
+		};
 		92B11ECC2B9B7122003C3DA1 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				9287152B2BE675CD0090BF8B /* Push Post */,
 				92B11ED62B9B7195003C3DA1 /* Storyboard */,
 				92B11ED52B9B7183003C3DA1 /* Delegate */,
 				92B11ED42B9B7178003C3DA1 /* Home Page */,
@@ -193,6 +221,7 @@
 				925EF82F2B9A94C1006404FF /* SelectedPhotosCollectionViewCell.swift */,
 				925EF82E2B9A94C1006404FF /* NewPostViewController.swift */,
 				09B0F1142BE1273400C586FF /* SelectablePhotosCollectionViewCell.swift */,
+				925393CC2BE50DB80084E5D0 /* NewPostViewModel.swift */,
 			);
 			path = "New Post";
 			sourceTree = "<group>";
@@ -254,6 +283,7 @@
 		92B11ED72B9B71A2003C3DA1 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				925393CE2BE53D8F0084E5D0 /* Images */,
 				92B11ED82B9B71A8003C3DA1 /* Recipe */,
 			);
 			path = Data;
@@ -270,6 +300,7 @@
 		92B11ED92B9B71B0003C3DA1 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				92C5F00B2BED7FDC003DE456 /* UIImageView */,
 				92B11EDB2B9B71C1003C3DA1 /* Firebase */,
 			);
 			path = Extension;
@@ -290,6 +321,14 @@
 			);
 			name = "FirebaseAppCheckü";
 			path = "FirebaseAppCheckü";
+			sourceTree = "<group>";
+		};
+		92C5F00B2BED7FDC003DE456 /* UIImageView */ = {
+			isa = PBXGroup;
+			children = (
+				92C5F00C2BED7FF0003DE456 /* UIImageView.swift */,
+			);
+			path = UIImageView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -401,20 +440,25 @@
 				92238A452B9A946F00A7481D /* SignUpViewController.swift in Sources */,
 				92238A492B9A947B00A7481D /* SignInViewModel.swift in Sources */,
 				925EF82C2B9A94B5006404FF /* LoginViewModel.swift in Sources */,
+				925393CD2BE50DB80084E5D0 /* NewPostViewModel.swift in Sources */,
 				09B0F1152BE1273400C586FF /* SelectablePhotosCollectionViewCell.swift in Sources */,
 				92238A402B9A945400A7481D /* HomePageViewController.swift in Sources */,
 				925EF8312B9A94C2006404FF /* SelectedPhotosCollectionViewCell.swift in Sources */,
 				925EF8382B9A94DE006404FF /* SettingsViewModel.swift in Sources */,
 				92238A3D2B9A944700A7481D /* AppDelegate.swift in Sources */,
 				925EF8392B9A94DE006404FF /* SettingsViewController.swift in Sources */,
+				9287152D2BE675E90090BF8B /* PushPostViewController.swift in Sources */,
 				925EF8302B9A94C2006404FF /* NewPostViewController.swift in Sources */,
 				92238A4A2B9A947B00A7481D /* SignInViewController.swift in Sources */,
 				925EF8342B9A94D1006404FF /* SearchViewController.swift in Sources */,
 				925EF83D2B9A94FA006404FF /* SimpleAppCheckProviderFactory.swift in Sources */,
+				925393D12BE53DA00084E5D0 /* SelectablePhoto.swift in Sources */,
 				92238A442B9A946F00A7481D /* SignUpViewModel.swift in Sources */,
 				925EF82A2B9A94B5006404FF /* WikiCollectionViewCell.swift in Sources */,
 				92238A372B9A93FA00A7481D /* Recipes.swift in Sources */,
+				92C5F00D2BED7FF0003DE456 /* UIImageView.swift in Sources */,
 				925EF82B2B9A94B5006404FF /* LoginViewController.swift in Sources */,
+				9287152F2BE676FA0090BF8B /* PushPostViewModel.swift in Sources */,
 				92238A3E2B9A944700A7481D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
