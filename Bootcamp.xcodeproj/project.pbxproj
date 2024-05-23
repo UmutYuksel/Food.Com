@@ -62,6 +62,7 @@
 		9287152D2BE675E90090BF8B /* PushPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9287152C2BE675E90090BF8B /* PushPostViewController.swift */; };
 		9287152F2BE676FA0090BF8B /* PushPostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9287152E2BE676FA0090BF8B /* PushPostViewModel.swift */; };
 		92C5F00D2BED7FF0003DE456 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C5F00C2BED7FF0003DE456 /* UIImageView.swift */; };
+		92C9ED452BFF79B500001C20 /* PushPostCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C9ED442BFF79B500001C20 /* PushPostCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -94,6 +95,7 @@
 		9287152C2BE675E90090BF8B /* PushPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushPostViewController.swift; sourceTree = "<group>"; };
 		9287152E2BE676FA0090BF8B /* PushPostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushPostViewModel.swift; sourceTree = "<group>"; };
 		92C5F00C2BED7FF0003DE456 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
+		92C9ED442BFF79B500001C20 /* PushPostCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushPostCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +179,7 @@
 			children = (
 				9287152C2BE675E90090BF8B /* PushPostViewController.swift */,
 				9287152E2BE676FA0090BF8B /* PushPostViewModel.swift */,
+				92C9ED442BFF79B500001C20 /* PushPostCollectionViewCell.swift */,
 			);
 			path = "Push Post";
 			sourceTree = "<group>";
@@ -453,6 +456,7 @@
 				925EF8342B9A94D1006404FF /* SearchViewController.swift in Sources */,
 				925EF83D2B9A94FA006404FF /* SimpleAppCheckProviderFactory.swift in Sources */,
 				925393D12BE53DA00084E5D0 /* SelectablePhoto.swift in Sources */,
+				92C9ED452BFF79B500001C20 /* PushPostCollectionViewCell.swift in Sources */,
 				92238A442B9A946F00A7481D /* SignUpViewModel.swift in Sources */,
 				925EF82A2B9A94B5006404FF /* WikiCollectionViewCell.swift in Sources */,
 				92238A372B9A93FA00A7481D /* Recipes.swift in Sources */,

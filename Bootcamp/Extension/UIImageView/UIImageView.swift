@@ -26,4 +26,25 @@ extension UIImageView {
             }
         }
     }
+    
+    func croppedImage(using scrollView: UIScrollView) -> UIImage? {
+            guard let image = self.image else { return nil }
+            
+            // ScrollView'ın scale'ini al
+            let scale = image.size.width / self.bounds.width
+            
+            // ScrollView'ın content offset'ini al ve scale'e göre ayarla
+            let visibleRect = CGRect(
+                x: scrollView.contentOffset.x * scale,
+                y: scrollView.contentOffset.y * scale,
+                width: scrollView.bounds.width * scale,
+                height: scrollView.bounds.height * scale
+            )
+            
+            // UIImage'ı crop et
+            guard let cgImage = image.cgImage?.cropping(to: visibleRect) else { return nil }
+            let croppedImage = UIImage(cgImage: cgImage)
+            
+            return croppedImage
+        }
 }
