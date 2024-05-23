@@ -13,7 +13,6 @@ import Photos
 struct NewPostViewModel{
     
     var selectableImages = [PHAsset]()
-    var selectablePhotos = [SelectablePhoto]()
     var selectedAssets = [PHAsset]()
     var imageManager = PHCachingImageManager()
     var croppedImages = [UIImage]()

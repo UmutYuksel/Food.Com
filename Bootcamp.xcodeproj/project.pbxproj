@@ -18,7 +18,6 @@
 		92238A492B9A947B00A7481D /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92238A472B9A947A00A7481D /* SignInViewModel.swift */; };
 		92238A4A2B9A947B00A7481D /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92238A482B9A947B00A7481D /* SignInViewController.swift */; };
 		925393CD2BE50DB80084E5D0 /* NewPostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925393CC2BE50DB80084E5D0 /* NewPostViewModel.swift */; };
-		925393D12BE53DA00084E5D0 /* SelectablePhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925393D02BE53DA00084E5D0 /* SelectablePhoto.swift */; };
 		925EF82A2B9A94B5006404FF /* WikiCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925EF8272B9A94B5006404FF /* WikiCollectionViewCell.swift */; };
 		925EF82B2B9A94B5006404FF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925EF8282B9A94B5006404FF /* LoginViewController.swift */; };
 		925EF82C2B9A94B5006404FF /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925EF8292B9A94B5006404FF /* LoginViewModel.swift */; };
@@ -79,7 +78,6 @@
 		92238A472B9A947A00A7481D /* SignInViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 		92238A482B9A947B00A7481D /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		925393CC2BE50DB80084E5D0 /* NewPostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostViewModel.swift; sourceTree = "<group>"; };
-		925393D02BE53DA00084E5D0 /* SelectablePhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectablePhoto.swift; sourceTree = "<group>"; };
 		925EF8272B9A94B5006404FF /* WikiCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WikiCollectionViewCell.swift; sourceTree = "<group>"; };
 		925EF8282B9A94B5006404FF /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		925EF8292B9A94B5006404FF /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -164,14 +162,6 @@
 				925EF8432B9A9637006404FF /* GoogleService-Info.plist */,
 			);
 			path = Bootcamp;
-			sourceTree = "<group>";
-		};
-		925393CE2BE53D8F0084E5D0 /* Images */ = {
-			isa = PBXGroup;
-			children = (
-				925393D02BE53DA00084E5D0 /* SelectablePhoto.swift */,
-			);
-			path = Images;
 			sourceTree = "<group>";
 		};
 		9287152B2BE675CD0090BF8B /* Push Post */ = {
@@ -286,7 +276,6 @@
 		92B11ED72B9B71A2003C3DA1 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				925393CE2BE53D8F0084E5D0 /* Images */,
 				92B11ED82B9B71A8003C3DA1 /* Recipe */,
 			);
 			path = Data;
@@ -455,7 +444,6 @@
 				92238A4A2B9A947B00A7481D /* SignInViewController.swift in Sources */,
 				925EF8342B9A94D1006404FF /* SearchViewController.swift in Sources */,
 				925EF83D2B9A94FA006404FF /* SimpleAppCheckProviderFactory.swift in Sources */,
-				925393D12BE53DA00084E5D0 /* SelectablePhoto.swift in Sources */,
 				92C9ED452BFF79B500001C20 /* PushPostCollectionViewCell.swift in Sources */,
 				92238A442B9A946F00A7481D /* SignUpViewModel.swift in Sources */,
 				925EF82A2B9A94B5006404FF /* WikiCollectionViewCell.swift in Sources */,
