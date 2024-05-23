@@ -10,18 +10,10 @@ import UIKit
 class SelectablePhotosCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var chechImageView: UIImageView!
-    @IBOutlet weak var highlightView: UIView!
     @IBOutlet weak var selectableImageView : UIImageView!
-    
-    override var isHighlighted: Bool {
-        didSet {
-            highlightView.isHidden = !isHighlighted
-        }
-    }
     
     override var isSelected: Bool {
         didSet {
-            highlightView.isHidden = !isSelected
             chechImageView.isHidden = !isSelected
         }
     }
@@ -33,7 +25,6 @@ class SelectablePhotosCollectionViewCell: UICollectionViewCell {
     
     var isSelectedCell: Bool = false {
             didSet {
-                highlightView.isHidden = !isSelectedCell
                 chechImageView.isHidden = !isSelectedCell
             }
         }

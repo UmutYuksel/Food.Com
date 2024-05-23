@@ -9,7 +9,7 @@ import UIKit
 
 class PushPostViewController: UIViewController {
 
-    @IBOutlet weak var pushCV: UICollectionView!
+    @IBOutlet weak var pushImageCV: UICollectionView!
     
     var viewModel = PushPostViewModel()
     
@@ -17,12 +17,25 @@ class PushPostViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         
-        pushCV.dataSource = self
-        pushCV.delegate = self
+        let titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
+        self.navigationController?.navigationBar.titleTextAttributes = titleTextAttributes
+        
+        pushImageCV.dataSource = self
+        pushImageCV.delegate = self
+        print(viewModel.selectedAssets.count)
     }
 
+    @IBAction func backButtonPressed(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+            super.viewWillDisappear(animated)
+            
+            // selectedAssets dizisini boşaltın
+            viewModel.selectedAssets.removeAll()
+        }
 }
 
 extension PushPostViewController : UICollectionViewDelegate , UICollectionViewDataSource , UICollectionViewDelegateFlowLayout{
@@ -31,20 +44,16 @@ extension PushPostViewController : UICollectionViewDelegate , UICollectionViewDa
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "pushCollectionViewCell", for: indexPath) as! pushCollectionViewCell
-        cell.pushımageView.setImageFromPHAsset(viewModel.selectedAssets[indexPath.row])
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PushCollectionViewCell", for: indexPath) as! PushPostCollectionViewCell
+        cell.pushImageView.image = viewModel.selectedAssets[indexPath.row]
+        cell.pushImageView.contentMode = .scaleAspectFit
+        cell.pushImageView.clipsToBounds = true
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 393, height: 402)
+        return CGSize(width: UIScreen.main.bounds.width , height: pushImageCV.bounds.height)
     }
     
     
-}
-
-class pushCollectionViewCell : UICollectionViewCell {
-    
-    @IBOutlet weak var pushTextField: UITextField!
-    @IBOutlet weak var pushımageView: UIImageView!
 }

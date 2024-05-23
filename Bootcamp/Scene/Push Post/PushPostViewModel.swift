@@ -11,7 +11,7 @@ import UIKit
 
 struct PushPostViewModel {
     
-    var selectedAssets = [PHAsset]()
+    var selectedAssets = [UIImage]()
 }
 
 

@@ -15,6 +15,8 @@ struct NewPostViewModel{
     var selectableImages = [PHAsset]()
     var selectablePhotos = [SelectablePhoto]()
     var selectedAssets = [PHAsset]()
-    var isAspectFit = true
     var imageManager = PHCachingImageManager()
+    var croppedImages = [UIImage]()
+    
+    
 }
